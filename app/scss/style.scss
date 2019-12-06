@@ -123,7 +123,6 @@
   right: 0;
   height: 0;
   overflow: hidden;
-  transition: all 0.3s;
 }
 .basket__box,
 .notification__box,
@@ -132,7 +131,6 @@
   height: 90px;
   margin-left: 15px;
   position: relative;
-  transition: all 0.3s;
   &:hover {
     .basket.header__circle.active.icon-shopping-cart,
     .notification,
@@ -142,14 +140,18 @@
       }
     }
     .circle__menu {
-      overflow: auto;
+      overflow: hidden;
       height: auto;
       border-width: 1px;
+    }
+    .circle__item {
+      padding: 23px;
     }
   }
 }
 .circle__item {
-  padding: 23px;
+  transition: all 0.3s;
+  padding: 0 23px;
   border: 1px solid #e0e0e0;
   border-top: none;
   display: flex;
@@ -160,6 +162,8 @@
     position: absolute;
     top: 27px;
     right: 28px;
+    color: #b0bec5;
+    font-size: 16px;
   }
 }
 .circle__img {
@@ -225,6 +229,9 @@
       padding: 20px 20px;
       overflow: auto;
     }
+    .user::before {
+      transform: rotate(180deg);
+    }
   }
 }
 
@@ -240,6 +247,7 @@
     font-size: 16px;
     color: #707070;
     right: 0;
+    transition: all 0.3s;
   }
   &__inner {
     display: flex;
@@ -271,7 +279,7 @@
   background-color: #ffffff;
   padding: 0px 20px;
   width: 158px;
-  top: 69px;
+  top: 70px;
   left: 20px;
   transition: all 0.3s;
   height: 0px;
@@ -294,7 +302,9 @@
     line-height: 18px;
   }
 }
-
+.icons-color::before {
+  color: $tomato;
+}
 // end header
 
 // start search

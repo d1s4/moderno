@@ -4,6 +4,9 @@
 @import "global";
 
 // start header
+.header {
+  background-color: #ffffff;
+}
 
 .header-top__inner {
   display: flex;
@@ -111,6 +114,7 @@
 //!basket dropbox
 
 .basket {
+  margin-right: 20px;
   span {
     background-color: $green;
   }
@@ -123,6 +127,7 @@
   right: 0;
   height: 0;
   overflow: hidden;
+  z-index: 1;
 }
 .basket__box,
 .notification__box,
@@ -236,7 +241,6 @@
 }
 
 .user {
-  margin-left: 20px;
   margin-right: 20px;
   padding-right: 20px;
   position: relative;
@@ -284,6 +288,7 @@
   transition: all 0.3s;
   height: 0px;
   overflow: hidden;
+  z-index: 1;
   a {
     font-size: 12px;
     margin-bottom: 15px;
@@ -304,6 +309,10 @@
 }
 .icons-color::before {
   color: $tomato;
+}
+.header__btn-menu,
+.menu-btn {
+  display: none;
 }
 // end header
 

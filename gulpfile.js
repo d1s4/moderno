@@ -29,7 +29,6 @@ gulp.task('css', function () {
         'node_modules/rateyo/src/jquery.rateyo.css',
         'node_modules/slick-carousel/slick/slick.css',
         'node_modules/ion-rangeslider/css/ion.rangeSlider.css',
-
     ])
         .pipe(concat('_libs.scss'))
         .pipe(gulp.dest('app/scss'))

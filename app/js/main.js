@@ -24,13 +24,13 @@ $(function () {
         prefix: "$"
     });
 
-    $(".icon-th-list").on('click', function () {
+    $(".icon-th-list").on("click", function () {
         $(".product-page__items > .product__item").addClass("list"),
             $(".icon-th-large").removeClass("active"),
             $(".icon-th-list").addClass("active")
     });
 
-    $(".icon-th-large").on('click', function () {
+    $(".icon-th-large").on("click", function () {
         $(".product-page__items > .product__item").removeClass("list"),
             $(".icon-th-list").removeClass("active"),
             $(".icon-th-large").addClass("active")
@@ -44,7 +44,16 @@ $(function () {
         $(".header__box").toggleClass("active");
     });
 
-    var mixer = mixitup('.products__inner-box');
+    $(".product-one__tabs .tab").on("click", function (event) {
+        var id = $(this).attr("data-id");
+        $(".product-one__tabs").find(".tab-item").removeClass("active-tab").hide();
+        $(".product-one__tabs .tabs").find(".tab").removeClass("active");
+        $(this).addClass("active");
+        $("#" + id).addClass("active-tab").fadeIn();
+        return false;
+    });
+
+    var mixer = mixitup(".products__inner-box");
 
 
 

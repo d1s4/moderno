@@ -1899,6 +1899,17 @@ button.icon-sort {
   }
   &__content {
     padding: 30px 35px 80px;
+
+    button {
+      margin-bottom: 50px;
+      background-color: $green;
+      color: #ffffff;
+      cursor: pointer;
+      border: none;
+      padding: 15px 36px;
+      @include f700;
+      margin-left: 261px;
+    }
   }
 }
 .settings__line {
@@ -1907,7 +1918,7 @@ button.icon-sort {
   align-items: center;
   label {
     color: #444444;
-    width: 260px;
+    min-width: 260px;
   }
   input {
     max-width: 540px;
@@ -2170,10 +2181,6 @@ button.icon-sort {
       color: $green;
       font-size: 24px;
     }
-    &::placeholder {
-      font-size: 15px;
-      color: #707070;
-    }
   }
   select,
   input,
@@ -2186,6 +2193,11 @@ button.icon-sort {
     padding: 0 18px;
     &:hover {
       background: linear-gradient(#f6f6f6, #e6e6e6);
+    }
+
+    &::placeholder {
+      font-size: 15px;
+      color: #707070;
     }
   }
   textarea {
@@ -2274,6 +2286,165 @@ button.icon-sort {
     color: #444444;
   }
 }
-
+input[type="file"]::-webkit-file-upload-button {
+  /* chromes and blink button */
+  cursor: pointer;
+}
 // end upload
+
+// start withdrawals
+.withdrawals__inner {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 110px;
+}
+.withdrawals__col {
+  max-width: 570px;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  border: 1px solid #dedede;
+}
+.withdrawals__title {
+  @include f500;
+  font-size: 24px;
+  color: $dark;
+  padding: 18px 32px 24px;
+  border-bottom: 1px solid #dedede;
+  margin-bottom: 30px;
+}
+.withdrawals__content {
+  padding-left: 35px;
+  padding-right: 40px;
+  button {
+    margin-bottom: 50px;
+    background-color: $green;
+    color: #ffffff;
+    cursor: pointer;
+    border: none;
+    padding: 15px 36px;
+    @include f700;
+  }
+}
+.withdrawals__form-line {
+  margin-bottom: 25px;
+  label {
+    display: block;
+    width: 100%;
+    @include f500;
+    font-size: 16px;
+    color: $dark;
+    margin-bottom: 15px;
+    span {
+      color: $green;
+      font-size: 24px;
+    }
+  }
+  input,
+  select {
+    width: 100%;
+    display: block;
+    border: 1px solid #d7d7d7;
+    background-color: #f9f9f9;
+    height: 40px;
+    padding: 0 18px;
+    &:hover {
+      background: linear-gradient(#f6f6f6, #e6e6e6);
+    }
+    &::placeholder {
+      font-size: 15px;
+      color: #707070;
+    }
+  }
+  .jq-selectbox {
+    width: 100%;
+  }
+  .jq-file__browse {
+    position: absolute;
+    top: 5px;
+    right: auto;
+    left: 9px;
+    padding: 0 12px;
+    border-left: 1px solid #d7d7d7;
+    border: 1px solid #d7d7d7;
+    border-radius: 0;
+    background: #fff;
+    box-shadow: none;
+    font: 12px "Roboto", sans-serif;
+    color: #444;
+    text-shadow: none;
+    font-size: 12px;
+    line-height: 26px;
+  }
+  .jq-selectbox {
+    width: 100%;
+  }
+  .jq-selectbox__select {
+    padding: 0px 18px 0;
+    background-color: #f9f9f9;
+    border: 1px solid #d7d7d7;
+    height: 40px;
+    line-height: 40px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    border-bottom-color: #d7d7d7;
+    background: #f9f9f9;
+    box-shadow: none;
+    color: #707070;
+    text-shadow: none;
+    border-radius: 0px;
+  }
+  .jq-selectbox__trigger {
+    border-left: none;
+  }
+  .jq-selectbox__trigger-arrow {
+    border: none;
+    top: 0;
+    right: 20px;
+    line-height: 40px;
+    &::before {
+      content: "\f0d7";
+      font-family: "icomoon";
+      font-size: 15px;
+      color: #444444;
+    }
+  }
+}
+.withdrawals__content-items {
+  padding-bottom: 35px;
+}
+.withdrawals__content-item {
+  display: flex;
+  height: 42px;
+  align-items: center;
+  font-size: 13px;
+  color: #444444;
+  &:nth-child(odd) {
+    background-color: #f9f9f9;
+  }
+}
+.withdrawals__content {
+  &-date {
+    width: 154px;
+    padding-left: 20px;
+    @include f500;
+  }
+  &-email {
+    width: 180px;
+  }
+  &-summ {
+    width: 70px;
+    @include f700;
+  }
+
+  &-status {
+    @include f700;
+    width: 88px;
+    &.withdrawals__content-paid {
+      color: $green;
+    }
+  }
+}
+// end withdrawals
+
 @import "media";

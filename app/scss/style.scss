@@ -1645,13 +1645,15 @@ button.icon-sort {
 
 // start page 404
 .page-404__wrapper,
-.about__wrapper {
+.about__wrapper,
+.contact__wrapper {
   border: 1px solid #dcdcdc;
   background-color: #ffffff;
   margin-bottom: 150px;
 }
 .page-404__head,
-.about__head {
+.about__head,
+.contact__head {
   @include f500;
   font-size: 24px;
   color: #444444;
@@ -1724,4 +1726,117 @@ button.icon-sort {
   }
 }
 // end about
+
+// start contact
+.contact {
+  &__head {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  &__inner {
+    padding: 35px 40px 15px;
+  }
+  &__map {
+    margin-bottom: 50px;
+    iframe {
+      width: 100%;
+      height: 415px;
+    }
+  }
+  &__box {
+    display: flex;
+  }
+}
+.contact__info {
+  margin-right: 30px;
+  max-width: 330px;
+  width: 100%;
+  &-item {
+    margin-bottom: 30px;
+  }
+  &-title {
+    padding-bottom: 20px;
+    position: relative;
+    font-family: "Roboto", sans-serif !important;
+    font-weight: 500;
+    font-size: 20px;
+    color: $dark;
+    padding-left: 40px;
+    margin-bottom: 20px;
+    &::after {
+      position: absolute;
+      content: "";
+      width: 44px;
+      height: 4px;
+      background-color: $green;
+      bottom: 0;
+      left: 40px;
+    }
+    &::before {
+      color: $green;
+      font-size: 24px;
+      position: absolute;
+      left: 0;
+      font-family: "icomoon";
+    }
+  }
+  &-content {
+    padding-left: 40px;
+    color: #707070;
+    max-width: 230px;
+  }
+}
+.contact__form {
+  width: 100%;
+  &-title {
+    font-size: 24px;
+    @include f500;
+    margin-bottom: 16px;
+    color: #333333;
+  }
+  &-row {
+    display: flex;
+    justify-content: space-between;
+  }
+  input {
+    background-color: #f1f4f5;
+    border: none;
+    height: 43px;
+    padding: 0 17px;
+    max-width: 349px;
+    width: 100%;
+    margin-bottom: 30px;
+    display: block;
+    &::placeholder {
+      font-size: 15px;
+      color: #7a7a7a;
+    }
+  }
+  textarea {
+    background-color: #f1f4f5;
+    border: none;
+    padding: 13px;
+    width: 100%;
+    height: 190px;
+    resize: none;
+    margin-bottom: 22px;
+    &::placeholder {
+      font-size: 15px;
+      color: #7a7a7a;
+    }
+  }
+  button {
+    border: none;
+    cursor: pointer;
+    background: $green;
+    color: #ffffff;
+    @include f700;
+    width: 190px;
+    padding: 20px 25px;
+    text-transform: uppercase;
+    font-size: 16px;
+    text-align: center;
+  }
+}
+// end contact
 @import "media";

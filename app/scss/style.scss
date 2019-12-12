@@ -502,6 +502,10 @@
 .products {
   padding: 110px 0;
   background-color: $grey;
+  &__wrapper {
+    max-width: 1920px;
+    margin: 0 auto;
+  }
 }
 .products__inner-btn {
   text-align: center;
@@ -527,8 +531,15 @@
 }
 .products__inner-box {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
+  margin-left: -30px;
   flex-wrap: wrap;
+}
+.products {
+  .product__item {
+    flex-basis: calc(25% - 30px);
+    margin-left: 30px;
+  }
 }
 .product__item {
   max-width: 442px;
@@ -557,6 +568,7 @@
   }
   &-name {
     max-width: 310px;
+    text-align-last: left;
   }
   &-title {
     color: $dark;
@@ -630,6 +642,10 @@
 
 .product-slider {
   padding: 110px 0 120px;
+  background-color: $grey;
+  &__wrapper {
+    max-width: 1920px;
+  }
 }
 .slick-dots {
   text-align: center;
@@ -1174,9 +1190,10 @@ button.icon-sort {
 
 .product-page__content {
   .product__item {
-    max-width: 270px;
+    flex-basis: calc(33.3333% - 30px);
     background-color: #ffffff;
-    // transition: all 0.5s;
+    transition: all 0.5s;
+    margin-left: 30px;
   }
   .product__item-img {
     min-height: 180px;
@@ -1200,9 +1217,10 @@ button.icon-sort {
 }
 .product-page__items {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-wrap: wrap;
   margin-bottom: 30px;
+  margin-left: -30px;
 }
 .pagination__list {
   li {
@@ -1269,6 +1287,7 @@ button.icon-sort {
 .product__item {
   &.list {
     max-width: 100%;
+    flex-basis: 100%;
     .product__item-star {
       margin-left: auto;
       margin-right: 30px;
@@ -2191,10 +2210,9 @@ button.icon-sort {
     background-color: #f9f9f9;
     height: 40px;
     padding: 0 18px;
-    &:hover {
+    &::hover {
       background: linear-gradient(#f6f6f6, #e6e6e6);
     }
-
     &::placeholder {
       font-size: 15px;
       color: #707070;
@@ -2254,6 +2272,7 @@ button.icon-sort {
   line-height: 26px;
 }
 .jq-selectbox {
+  max-width: 540px;
   width: 100%;
 }
 .jq-selectbox__select {
